@@ -29,6 +29,7 @@
                     $counter += 1;
                 }
             }
+            echo $counter;
             return $counter;
         }
     }

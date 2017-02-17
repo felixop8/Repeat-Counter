@@ -20,7 +20,11 @@
 
   //  routing for after form is submitted
    $app->post("/result", function() use ($app) {
-       return $app['twig']->render('result.html.twig');
+       $word_input = $_POST['input_word'];
+       $phrase_input = $_POST['sentence'];
+       $comparation = new RepeatCounter;
+       $evaluate = $comparation->CounterRepetition($word_input, $phrase_input);
+       return $app['twig']->render('result.html.twig', array('result' => $evaluate));
    });
 
    return $app;
