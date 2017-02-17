@@ -1,6 +1,6 @@
 # _Address Book_
 
-#### _Application to demonstrate the use of PHP, Silex and Twig._
+#### _Website in Silex that returns how frequently a word appears in a given string._
 #### _By Félix Oporto_
 | [<img src=https://avatars1.githubusercontent.com/u/20342423?v=3&s=460 width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) |
 | :---: |
@@ -8,37 +8,17 @@
 
 ## Description
 
-_This Address Book has been created as a project for the first week of php at Epicodus. It is a demonstration of how to use the framework Silex and how to template with Twig. The application allows the users to introduce a contact and save it, with the option of deleting all the contact list._
+_Web app that return how frequently a word appears in a given string. This website has been created as a project for the second week of php at Epicodus. It serves as a demonstration of the use of Behavior-driven development(BDD) and Red-Green-Refactor._
 
 ## Specifications
 
 
-* #### Behavior: User input.
+* #### Behavior: User input a word and a string of words. User submit form and app returns how frequently the word appear in the given string.  
 
-    * _Input Example: Name: Felix, Last name: Oporto, Phone number: 234124545, Address: 543 NE Lawrence Ave #5B._
+    * _Input Example: Word: "fear"; String: "The only thing we should fear is fear itself"._
 
-    * _Example Output: You created a new contact!! Felix Oporto, Phone number: 234124545, Address: 543 NE Lawrence Ave #5B ._
+    * _Example Output: 2 ._
 
-
-* #### User click "create another account", app return to home page and display list of all contacts.
-
-    * _Input Example: Click "create another account"._
-
-    * _Example Output: app return to root directory, display all the contacts entered._
-
-
-* #### User click delete button, app navigates to delete_contact page, display "Contact list cleared!" and  delete all the contact stored.
-
-    * _Input Example: Click "delete"._
-
-    * _Example Output: Contact list cleared!._
-
-
-* #### User click "home", app return to home page and delete list of contacts.
-
-    * _Input Example: click "home"._
-
-    * _Example Output: app return to root directory, no contact list displayed._
 
 ## Setup/Installation Requirements
 
