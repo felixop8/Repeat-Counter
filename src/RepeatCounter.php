@@ -1,23 +1,17 @@
 <?php
     class RepeatCounter
     {
-
-        // private $word;
-        //
-        // function __construct($input_word)
-        // {
-        //     $this->word = $input_word;
-        // }
-        //
-        // function getWord()
-        // {
-        //     return $this->word;
-        // }
-
-
-        function compareWord($user_word)
+        function CounterRepetition($single_word, $phrase)
         {
-            return $user_word;
+            $array_of_words = explode(" ", $phrase);
+            $counter = 0;
+            foreach ($array_of_words as $word) {
+                if ($word == $single_word)
+                {
+                    $counter += 1;
+                }
+            }
+            return $counter;
         }
     }
 
