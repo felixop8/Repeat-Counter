@@ -7,12 +7,14 @@
   </div>
   <div class="container">
     <h1>We found:</h1>
-    <ul>
-      {% for item in result %}
-      <li><h2>{{item}}</h2></li>
+    <div class="well">
+      <ul>
+        {% for item in result %}
+        <li><h2>{{item}}</h2></li>
 
-      {% endfor %}
-    </ul>
-    <a href="/"><button type='submit' class='btn btn-success btn-lg'>Return</button></a>
+        {% endfor %}
+      </ul>
+    </div>
+    <a href="/"><button type='submit' class='btn btn-success btn-lg btn-danger'>Return</button></a>
   </div>
 </body>

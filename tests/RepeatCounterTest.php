@@ -32,12 +32,12 @@
         {
             // Arrange
             $test_repetition = new RepeatCounter;
-            $input_word = " ";
-            $input_string_of_words = " ";
+            $input_word = "fear";
+            $input_string_of_words = "The only thing we should fear, is fear itself.";
             // Act
             $result = $test_repetition->CounterRepetition($input_word, $input_string_of_words);
             // Assert
-            $this->assertEquals(0, $result);
+            $this->assertEquals(2, $result);
         }
     }
  ?>

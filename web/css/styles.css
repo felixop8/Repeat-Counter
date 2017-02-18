@@ -10,3 +10,6 @@ body {
 .header {
     text-align: center;
 }
+.well {
+  background: rgb(39, 196, 82);
+}
