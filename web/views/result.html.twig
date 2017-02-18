@@ -1,17 +1,18 @@
-
-
-
 {{ include('base.html.twig') }}
-
 <body>
   <div class="jumbotron">
     <div class="container">
-      <h1>Word Frequency</h1>
+      <h1 class="header">🔮 WORD FREQUENCY</h1>
     </div>
   </div>
   <div class="container">
-    <a href="/"><button type='submit' class='btn btn-success btn-lg'>Return</button></a>
+    <h1>We found:</h1>
+    <ul>
+      {% for item in result %}
+      <li><h2>{{item}}</h2></li>
 
-    {{ result }}
+      {% endfor %}
+    </ul>
+    <a href="/"><button type='submit' class='btn btn-success btn-lg'>Return</button></a>
   </div>
 </body>
