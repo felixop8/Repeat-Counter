@@ -44,9 +44,9 @@
                 $counter = "❌ No word find in this text:";
             }
 
-            // return $final_result = array($counter, $phrase_style);
+            return $final_result = array($counter, $phrase_style);
             // FOR TESTING UNCOMMENT THIS RETURN ↙️ AND COMMENT THIS ONE ↖️
-            return $counter;
+            // return $counter;
         }
     }
 
