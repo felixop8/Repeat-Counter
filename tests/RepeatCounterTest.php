@@ -33,11 +33,11 @@
             // Arrange
             $test_repetition = new RepeatCounter;
             $input_word = "fear";
-            $input_string_of_words = "The only thing we should fear, is fear itself.";
+            $input_string_of_words = "The\" only (thing 'hola' 'fear' fear, is \"fear\" itself.";
             // Act
             $result = $test_repetition->CounterRepetition($input_word, $input_string_of_words);
             // Assert
-            $this->assertEquals(2, $result);
+            $this->assertEquals(3, $result);
         }
     }
  ?>

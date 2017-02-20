@@ -7,13 +7,15 @@
             $user_word = strtolower($single_word);
             $user_phrase = strtolower($phrase);
             $phrase_splited = str_split($user_phrase);
-            $punctuation_array= array('.', ',', ';', ':', '-', ' " ', ' \' ', '(', ')', '-', '?', '!' );
+            $punctuation_array= array(".", "," , ";" , ":" , "-",  '"' , "'", "(" , ")" , "-" , "?" , "!");
 
             // CHECK PUNCTUATION
             foreach ($phrase_splited as $key => $value) {
                 foreach ($punctuation_array as $punctuation) {
-                    if ($value== $punctuation)
+                    if ($value == $punctuation)
                     {
+                        // $phrase_splited = ltrim($valur, $special_char);
+                        // $phrase_splited = rtrim($word_in_text, $special_char);
                         unset($phrase_splited[$key]);
                     }
                 }
@@ -29,7 +31,7 @@
             foreach ($array_of_words as $word) {
                 if ($user_word == $word)
                 {
-                    $counter += 1;
+                    $counter ++;
                     array_push($array_style_phrase, "🔎" . $word . "🔍");
                 } else {
                     array_push($array_style_phrase, $word);
@@ -42,9 +44,9 @@
                 $counter = "❌ No word find in this text:";
             }
 
-            return $final_result = array($counter. " words.", $phrase_style);
+            // return $final_result = array($counter, $phrase_style);
             // FOR TESTING UNCOMMENT THIS RETURN ↙️ AND COMMENT THIS ONE ↖️
-            // return $counter;
+            return $counter;
         }
     }
 
