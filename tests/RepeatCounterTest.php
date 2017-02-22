@@ -63,5 +63,17 @@
             // Assert
             $this->assertEquals(2, $result);
         }
+
+        function test_user_word_special_character()
+        {
+            // Arrange
+            $test_repetition = new RepeatCounter;
+            $input_word = "fear.";
+            $input_string_of_words = "The only thing we should fear. is fear itself";
+            // Act
+            $result= $test_repetition->countRepeats($input_word, $input_string_of_words);
+            // Assert
+            $this->assertEquals(1, $result);
+        }
     }
  ?>

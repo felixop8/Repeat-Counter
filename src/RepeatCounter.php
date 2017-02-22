@@ -1,7 +1,7 @@
 <?php
     class RepeatCounter
     {
-        function countRepeats($single_word, $phrase)
+        function countRepeats($single_word, $sentence)
         {
             // Make word to find lowercase
             $user_word = strtolower($single_word);
@@ -10,24 +10,28 @@
 
 
             // Make sentence lowercase
-            $user_phrase = strtolower($phrase);
-            // Take user phrase and split in an array of words
-            $user_phrase = explode(" ", $user_phrase);
+            $user_sentence = strtolower($sentence);
+            // Take user sentence and split in an array of words
+            $user_sentence = explode(" ", $user_sentence);
 
 
             $special_chars = array(".", "," , ";" , ":" , "-",  '"' , "'", "(" , ")" , "-" , "?" , "!");
 
 
             $count = 0;
-            foreach ($user_phrase as $word) {
-                foreach ($special_chars as $character) {
-                    $word = trim($word, $character);
-                }
-                $word = strtolower($word);
-                // var_dump($word_in_text);
-
-                if ($user_word == $word){
+            foreach ($user_sentence as $word_in_sentence) {
+                $word_in_sentece = strtolower($word_in_sentence);
+                // check user word with each string in an array in case it includes a special character.
+                if ($user_word == $word_in_sentence){
                     $count++;
+                } else {
+                    foreach ($special_chars as $character) {
+                        // remove special characters
+                        $word_in_sentence = trim($word_in_sentence, $character);
+                    }
+                    if ($user_word == $word_in_sentence){
+                        $count++;
+                    }
                 }
             }
 
