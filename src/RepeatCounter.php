@@ -3,8 +3,12 @@
     {
         function countRepeats($single_word, $phrase)
         {
-
+            // Make word to find lowercase
             $user_word = strtolower($single_word);
+            // Remove whitespaces
+            $user_word = trim($user_word, " ");
+
+            // Make sentence lowercase
             $user_phrase = strtolower($phrase);
             $phrase_splited = str_split($user_phrase);
             $punctuation_array= array(".", "," , ";" , ":" , "-",  '"' , "'", "(" , ")" , "-" , "?" , "!");
