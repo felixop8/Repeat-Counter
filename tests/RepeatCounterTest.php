@@ -11,9 +11,21 @@
             $input_word = "fear";
             $input_string_of_words = "The only thing we should fear is fear itself";
             // Act
-            $result = $test_repetition->CounterRepetition($input_word, $input_string_of_words);
+            $result = $test_repetition->countRepeats($input_word, $input_string_of_words);
             // Assert
             $this->assertEquals(2, $result);
+        }
+
+        function test_mismatching_word()
+        {
+            // Arrange
+            $test_repetition = new RepeatCounter;
+            $input_word = "crocodile";
+            $input_string_of_words = "The only thing we should fear is fear itself";
+            // Act
+            $result = $test_repetition->countRepeats($input_word, $input_string_of_words);
+            // Assert
+            $this->assertEquals(0, $result);
         }
 
         function test_mix_lower_upper()
@@ -23,7 +35,7 @@
             $input_word = "Fear";
             $input_string_of_words = "The only thing we should fear is fear itself";
             // Act
-            $result = $test_repetition->CounterRepetition($input_word, $input_string_of_words);
+            $result = $test_repetition->countRepeats($input_word, $input_string_of_words);
             // Assert
             $this->assertEquals(2, $result);
         }
@@ -35,7 +47,7 @@
             $input_word = "fear";
             $input_string_of_words = "The\" only (thing 'hola' 'fear' fear, is \"fear\" itself.";
             // Act
-            $result = $test_repetition->CounterRepetition($input_word, $input_string_of_words);
+            $result = $test_repetition->countRepeats($input_word, $input_string_of_words);
             // Assert
             $this->assertEquals(3, $result);
         }

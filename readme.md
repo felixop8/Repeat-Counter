@@ -15,12 +15,17 @@ _Web app that return how frequently a word appears in a given string. This websi
 ## Specifications
 
 
-* #### Behavior: User input a word and a string of words. User submit form and app returns how frequently the word appear in the given string.  
+&nbsp;
+## Specifications
 
-    * _Input Example: Word: "fear"; String: "The only thing we should fear is fear itself"._
-
-    * _Example Output: 2 ._
-
+|Behavior|Input 1 // Input 2|Output|Explanation of Values|Simplest Way to Test Behavior|
+|--------|-----|------|---------------------|-----------------------------|
+| Program will recognize one word and another word as the same | "shiny" // "shiny" | 1 | These inputs were chosen because they are equal. This and all future outputs were chosen because they are simple numerical representations of the specified relationship between the first and second input | This behavior can be tested by comparing input 1 to input 2 |
+| Program will recognize no occurrences of a word within a phrase | "shiny" // "boots of leather" | 0 | These inputs were chosen because they are a simple example of a word that does not occur in a phrase | This behavior can be tested by splitting input 2 into an array and comparing input 1 to each value in the input 2 array |
+| Program will find one occurrence of a word within a phrase | "shiny" // "shiny boots of leather" | 1 | These inputs were chosen because there is only one occurrence of input 1 in input 2 | This behavior can also be tested by splitting input 2 into an array and comparing input 1 to each value in the input 2 array |
+| Program will find all occurrences of word within a phrase | "shiny" // "shiny shiny shiny boots of leather" | 3 | These inputs were chosen because input 1 occurs in input 2 multiple times | This behavior can also be tested by splitting input 2 into an array and comparing input 1 to each value in the input 2 array |
+| Program will find all occurrences of word within a phrase regardless of case | "ShInY" // "shiny SHINY ShInY boots of leather" | 3 | These inputs were chosen because input 1 occurs in input 2 multiple times but the case does not match 2 out of three times | This behavior can be tested by changing input one and input two to all lower case before splitting input 2 and comparing |
+| Program will find all occurrences of word within a phrase regardless of punctuation | "ShInY" // "Shiny? Shiny! ..Shiny.. boots of leather" | 3 | These inputs were chosen because input 1 occurs in input 2 multiple times but each occurrence of input 1 in input 2 has adjacent punctuation | This behavior can be tested by searching input 2 and removing all occurrences of a predefined set of punctuation characters |
 
 ## Setup/Installation Requirements
 

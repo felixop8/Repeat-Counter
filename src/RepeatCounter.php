@@ -1,7 +1,7 @@
 <?php
     class RepeatCounter
     {
-        function CounterRepetition($single_word, $phrase)
+        function countRepeats($single_word, $phrase)
         {
 
             $user_word = strtolower($single_word);
@@ -39,14 +39,14 @@
             }
 
             // CHECK IF THERE IS A MATCH OR NOT
-            $phrase_style = implode(" ", $array_style_phrase);
-            if ($counter == 0) {
-                $counter = "❌ No word find in this text:";
-            }
+            // $phrase_style = implode(" ", $array_style_phrase);
+            // if ($counter == 0) {
+            //     $counter = "❌ No word find in this text:";
+            // }
 
-            return $final_result = array($counter, $phrase_style);
+            // return $final_result = array($counter, $phrase_style);
             // FOR TESTING UNCOMMENT THIS RETURN ↙️ AND COMMENT THIS ONE ↖️
-            // return $counter;
+            return $counter;
         }
     }
 

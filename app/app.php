@@ -23,7 +23,7 @@
        $word_input = $_POST['input_word'];
        $phrase_input = $_POST['sentence'];
        $comparation = new RepeatCounter;
-       $evaluate = $comparation->CounterRepetition($word_input, $phrase_input);
+       $evaluate = $comparation->countRepeats($word_input, $phrase_input);
        return $app['twig']->render('result.html.twig', array('result' => $evaluate, 'word_to_find' => $word_input));
    });
 
