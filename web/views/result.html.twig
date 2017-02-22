@@ -8,12 +8,7 @@
   <div class="container">
     <h1>We found:</h1>
     <div class="well">
-      <ul>
-        {% for item in result %}
-        <li><h2>{{item}}</h2></li>
-
-        {% endfor %}
-      </ul>
+      {{result}}
     </div>
     <a href="/"><button type='submit' class='btn btn-success btn-lg btn-danger'>Return</button></a>
   </div>
