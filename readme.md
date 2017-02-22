@@ -2,8 +2,8 @@
 
  https://afternoon-headland-46464.herokuapp.com/		
 
- #### _Website in Silex that returns how frequently a word appears in a given string._		
- #### _By Félix Oporto_		
+ ## _Website in Silex that returns how frequently a word appears in a given string._		
+ ## _By Félix Oporto_		
  | [<img src=https://avatars1.githubusercontent.com/u/20342423?v=3&s=460 width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) |		
  | :---: |		
 
