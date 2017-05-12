@@ -5,13 +5,13 @@ https://wordfrequencyapp.herokuapp.com/
 
 #### _Website in Silex that returns how frequently a word appears in a given string._		
 #### _By Félix Oporto_		
-| [<img src=https://avatars1.githubusercontent.com/u/20342423?v=3&s=460 width="100px;"/><br /><sub>Felix Oporto</sub>](https://github.com/felixop8) |		
-| :---: |		
-
 
 ## Description		
 
 _Web app that return how frequently a word appears in a given string. This website has been created as a project for the second week of php at Epicodus. It serves as a demonstration of the use of Behavior-driven development(BDD) and Red-Green-Refactor._		
+
+# ![pageres](img/shot.png)
+
 
 
 &nbsp;
